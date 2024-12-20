@@ -12,7 +12,7 @@ fn main() {
 }
 
 /// Get the list of changed files between two commits
-fn get_changed_files(start_commit: &String, end_commit: &String) -> Vec<String> {
+fn get_changed_files(start_commit: &str, end_commit: &str) -> Vec<String> {
     let output = Command::new("git")
         .args(["diff", "--name-only", start_commit, end_commit])
         .output()
